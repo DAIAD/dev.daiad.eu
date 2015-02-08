@@ -1,0 +1,4 @@
+---
+
+  - name: Print a helloworld message
+    shell: echo 'Hello {{ansible_hostname}}, at ' $(date) >> ~/greeting.out.txt

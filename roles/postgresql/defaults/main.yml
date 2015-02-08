@@ -1,0 +1,5 @@
+---
+# Provide defaults for the base-workstation.
+# The variables below can be overriden at a group or host level.
+
+
