@@ -1,0 +1,10 @@
+
+- hosts: all
+  remote_user: daiad
+  roles:
+  - node
+
+#- hosts: rdb
+#  remote_user: daiad
+#  roles:
+#  - postgresql
