@@ -3,3 +3,5 @@
   - name: Print a helloworld message
     shell: echo 'Hello {{ansible_hostname}}, at ' $(date) >> ~/greeting.out.txt
 
+  - name: Create a Bash profile
+    template: src=etc/user-profile dest=~/.profile mode=0600

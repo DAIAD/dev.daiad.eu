@@ -2,4 +2,7 @@
 # Provide defaults for the node role.
 # The variables below can be overriden at a group or host level.
 
-
+prefs:
+  bash:
+    history_size: 8000
+    history_file_size: 50000
