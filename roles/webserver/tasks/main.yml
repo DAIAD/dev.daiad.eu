@@ -1,0 +1,13 @@
+---
+
+  - name: Install Apache2-related APT packages
+    sudo: yes
+    apt: pkg={{item}} state=latest
+    with_items:
+    - apache2
+    - apache2-utils
+    - libapache2-mod-jk
+    - libapache2-mod-uwsgi
+    - libapache2-mod-php5
+    - php5
+    - php5-cli

@@ -1,4 +1,12 @@
 ---
 
-  - name: Print a helloworld message
-    shell: echo 'Hello {{ansible_hostname}}, at ' $(date) >> ~/greeting.out.txt
+  - name: Install PostgreSQL-related APT packages
+    sudo: yes
+    apt: pkg={{item}} state=latest
+    with_items:
+    - postgresql-9.3
+    - postgresql-contrib-9.3
+    - postgresql-doc-9.3
+    - postgresql-9.3-postgis-2.1
+ 
+

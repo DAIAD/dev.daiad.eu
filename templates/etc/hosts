@@ -2,7 +2,11 @@
 127.0.1.1   {{hostname}}
 
 {% for h in groups['all'] %}
-{{hostvars[h]['ansible_default_ipv4']['address']}} {{h}}
+{% for address in hostvars[h]['ansible_all_ipv4_addresses'] %}
+{% if address | match("10.0.2.*") %}
+{{address}} {{h}}
+{% endif %}
+{% endfor %}
 {% endfor %}
 
 

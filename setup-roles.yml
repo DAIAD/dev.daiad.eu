@@ -4,7 +4,13 @@
   roles:
   - node
 
-#- hosts: rdb
-#  remote_user: daiad
-#  roles:
-#  - postgresql
+- hosts: rdb
+  remote_user: daiad
+  roles:
+  - postgresql
+ 
+- hosts: app
+  remote_user: daiad
+  roles:
+  - webserver
+  

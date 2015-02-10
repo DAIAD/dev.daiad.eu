@@ -11,15 +11,15 @@
   
   - copy: content='{{hostname}}' dest=/etc/hostname
     sudo: yes
+ 
+  - debug: var=ansible_all_ipv4_addresses
   
   - template: src=templates/etc/hosts dest=/etc/hosts
     sudo: yes
-
+ 
   - user: name=daiad createhome=yes shell=/bin/bash groups=sudo,wheel append=yes
     sudo: yes
   
-  - debug: var=groups
-
   - authorized_key: user=daiad key="{{lookup('file', '~/.ssh/id_rsa-daiad.pub')}}"
     sudo: yes
 

@@ -1,0 +1,4 @@
+---
+# Provide defaults for the webserver role.
+# The variables below can be overriden at a group or host level.
+
